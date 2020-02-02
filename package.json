@@ -1,0 +1,16 @@
+{
+  "name": "habbitual",
+  "version": "1.0.0",
+  "description": "JS healthy habbit tracker",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "tests": "node ./tests/index.js"
+  },
+  "author": "Joshua Shoemaker",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.0.1",
+    "progress": "^2.0.3"
+  }
+}
