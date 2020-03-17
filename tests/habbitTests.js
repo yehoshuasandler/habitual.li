@@ -1,6 +1,6 @@
-import createHabbit from '../src/UseCases/createHabbit.js' 
-import getHabbitProperties from '../src/UseCases/getHabbitProperties.js' 
-import editHabbitProperties from '../src/UseCases/editHabbitProperties.js'
+import createHabbit from '../src/core/UseCases/createHabbit.js' 
+import getHabbitProperties from '../src/core/UseCases/getHabbitProperties.js' 
+import editHabbitProperties from '../src/core/UseCases/editHabbitProperties.js'
 
 const createValidHabbitTest = () => {
   try{

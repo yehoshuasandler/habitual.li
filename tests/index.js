@@ -2,11 +2,13 @@ import ProgressBar from 'progress'
 
 import habbitTests from './habbitTests.js'
 import eventTests from './eventTests.js'
+import habbitCollectionTests from './habbitCollectionTests.js'
 
 function testResults () {
   const tests = [
     habbitTests,
-    eventTests
+    eventTests,
+    habbitCollectionTests
   ].flat()
 
   const testsBar = new ProgressBar(`\x1b[36mRunning Tests [:bar] :current/${tests.length}`, { total: tests.length })

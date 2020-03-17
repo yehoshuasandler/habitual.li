@@ -1,12 +1,12 @@
-import createSingleEvent from '../src/UseCases/createSingleEvent.js' 
-import editSingleEventProperties from '../src/UseCases/editSingleEventProperties.js'
-import getSingleEventProperties from '../src/UseCases/getSingleEventProperties.js' 
-import createRecurringEvent from '../src/UseCases/createRecurringEvent.js'
-import editRecurringEventProperties from '../src/UseCases/editRecurringEventProperties.js'
-import getRecurringEventProperties from '../src/UseCases/getRecurringEventProperties.js'
-import convertToSingleEvent from '../src/UseCases/convertToSingleEvent.js'
+import createSingleEvent from '../src/core/UseCases/createSingleEvent.js' 
+import editSingleEventProperties from '../src/core/UseCases/editSingleEventProperties.js'
+import getSingleEventProperties from '../src/core/UseCases/getSingleEventProperties.js' 
+import createRecurringEvent from '../src/core/UseCases/createRecurringEvent.js'
+import editRecurringEventProperties from '../src/core/UseCases/editRecurringEventProperties.js'
+import getRecurringEventProperties from '../src/core/UseCases/getRecurringEventProperties.js'
+import convertToSingleEvent from '../src/core/UseCases/convertToSingleEvent.js'
 
-import frequencyTypes from '../src/DataStructures/EventFrequencyTypes.js'
+import frequencyTypes from '../src/core/DataStructures/EventFrequencyTypes.js'
 
 const createInvalidSingleEventTest = () => {
   try {

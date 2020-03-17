@@ -8,9 +8,5 @@
     "tests": "node ./tests/index.js"
   },
   "author": "Joshua Shoemaker",
-  "license": "ISC",
-  "devDependencies": {
-    "mocha": "^7.0.1",
-    "progress": "^2.0.3"
-  }
+  "license": "ISC"
 }
