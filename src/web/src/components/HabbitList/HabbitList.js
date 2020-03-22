@@ -1,5 +1,6 @@
-import HabbitLineItem from './HabbitLineItem.js'
 import HabbitCollection from '../../../../core/Collections/HabbitCollection.js'
+import HabbitLineItem from './HabbitLineItem.js'
+import habbitListTemplate from './HabbitListTemplate.html'
 
 class HabbitList extends HTMLElement {
   constructor () {
@@ -8,9 +9,9 @@ class HabbitList extends HTMLElement {
     document.addEventListener('addHabit', () => { this.update() })
     
     this.shadow = this.attachShadow({ mode: 'open' })
-    const element = document.createElement('ul')
-    element.setAttribute('id', 'habbitList')
-    this.shadow.appendChild(element)
+    const template = document.createElement('template')
+    template.innerHTML = habbitListTemplate
+    this.shadow.appendChild(template.content.cloneNode(true))
 
   }
 

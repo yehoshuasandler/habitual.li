@@ -1,4 +1,4 @@
-import indexTemplate from './indexTemplate.html'
+import indexTemplate from './IndexTemplate.html'
 import AddHabbitForm from './components/AddHabbit/AddHabbitForm.js'
 import HabbitList from './components//HabbitList/HabbitList.js'
 

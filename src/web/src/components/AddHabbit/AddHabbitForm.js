@@ -1,4 +1,4 @@
-import AddHabbitForm from './addHabbitForm.html'
+import AddHabbitFormTemplate from './addHabbitFormTemplate.html'
 import AddHabbitFormController from './AddHabbitFormController.js'
 
 class AddHabbitFormView extends HTMLElement {
@@ -8,7 +8,7 @@ class AddHabbitFormView extends HTMLElement {
     
     const shadow = this.attachShadow({mode: 'open'})
     const element = document.createElement('template')
-    element.innerHTML = AddHabbitForm
+    element.innerHTML = AddHabbitFormTemplate
     shadow.appendChild(element.content.cloneNode(true))
 
     this.connectInputControl(shadow)
