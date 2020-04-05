@@ -2,5 +2,6 @@ export default {
   key: '',
   cert: '',
   ca: '',
-  sessionSecret: 'test'
+  sessionSecret: 'test',
+  dbConnectionUrl: 'mongodb://localhost/habitual'
 }

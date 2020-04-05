@@ -1,6 +1,10 @@
 import createHabbit from '../src/core/UseCases/createHabbit.js' 
 import getHabbitProperties from '../src/core/UseCases/getHabbitProperties.js' 
 import editHabbitProperties from '../src/core/UseCases/editHabbitProperties.js'
+import DB from '../src/server/db/DB.js'
+import HabitModel from '../src/server/db/models/Habits.js'
+
+const db = new DB()
 
 const createValidHabbitTest = () => {
   try{
@@ -57,6 +61,17 @@ const editHabbitPropertiesTest = () => {
   }
 }
 
+const saveHabitToDbTest = async () => {
+  const input = { name: `TEST${Math.random() * 100}` }
+  const saveResponse = await db.insertOne({
+    model: HabitModel,
+    document: input
+  })
+  if (saveResponse.name === input.name) return true
+  else return false
+
+}
+
 const tests = [
   {
     name: 'Create Invalid Habbit',
@@ -73,6 +88,10 @@ const tests = [
   {
     name: 'Edit Habbit Properties',
     test: editHabbitPropertiesTest
+  },
+  {
+    name: 'Save Habit to DB',
+    test: saveHabitToDbTest
   }
 ]
 

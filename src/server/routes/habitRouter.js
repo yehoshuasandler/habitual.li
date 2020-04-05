@@ -1,8 +1,9 @@
 import express from 'express'
-import habitRouter from './habbitRouter'
-
+import db from '../db/DB.js'
 const router = express.Router()
 
-router.use('/habit', habitRouter)
+router.post('/insertOne', async (req, res) => {
+  
+})
 
 export default router

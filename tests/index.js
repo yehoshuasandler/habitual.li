@@ -4,6 +4,9 @@ import habbitTests from './habbitTests.js'
 import eventTests from './eventTests.js'
 import habbitCollectionTests from './habbitCollectionTests.js'
 
+import DB from '../src/server/db/DB.js'
+const db = new DB()
+
 function testResults () {
   const tests = [
     habbitTests,
@@ -27,6 +30,8 @@ function testResults () {
 }
 
 function runTests () {
+  db.connect()
+
   const failedTestResults = testResults()
   if(failedTestResults.length === 0) {
     console.log('\x1b[32m%s\x1b[0m', 'All Tests Passed!!')

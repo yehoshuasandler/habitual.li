@@ -3,6 +3,7 @@ import http from 'http'
 import https from 'https'
 import SYS from './sys.js'
 import Server from './Server.js'
+import DB from './db/DB.js'
 
 const main = () => {
 
@@ -12,6 +13,13 @@ const main = () => {
   webService.listen(port, () => {
     console.log(`Server is listening on ${port}`)
   })
+
+  connectToDatabase()
+}
+
+connectToDatabase = () => {
+  const db = new DB()
+  db.connect()
 }
 
 const createServer = protocol => {

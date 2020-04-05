@@ -15,8 +15,8 @@ class AddHabbitFormView extends HTMLElement {
   }
 
   connectInputControl = shadow => {
-    shadow.querySelector('#addHabbitForm').addEventListener('submit', this.controller.onSubmit)
-    const habitNameInput = shadow.querySelector('#habbitNameInput')
+    shadow.querySelector('#addHabitForm').addEventListener('submit', this.controller.onSubmit)
+    const habitNameInput = shadow.querySelector('#habitNameInput')
     habitNameInput.addEventListener('change', this.controller.changeNameInput)
     habitNameInput.addEventListener('change', () => habitNameInput.value = '')
   }
