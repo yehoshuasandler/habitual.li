@@ -25,6 +25,17 @@ class DB {
     db.disconnect()
   }
 
+  find = async props => {
+    const { query, model } = props
+    try {
+      const findResponse = await model.find(query)
+      return findResponse
+    } catch (err) {
+      console.error(err)
+      return []
+    }
+  }
+
   insertOne = async props => {
     const { document, model } = props
     const record = new model(document)
@@ -32,7 +43,7 @@ class DB {
       const saveRequest = await record.save()
       return saveRequest
     } catch (err) {
-      console.log(err)
+      console.error(err)
       return {}
     }
   }
