@@ -1,4 +1,4 @@
-import SYS from '../sys.js'
+import SYS from '../server/sys.js'
 import db from 'mongoose'
 
 let instance = null

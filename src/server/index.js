@@ -3,7 +3,7 @@ import http from 'http'
 import https from 'https'
 import SYS from './sys.js'
 import Server from './Server.js'
-import DB from './db/DB.js'
+import DB from '../db/DB.js'
 
 const main = () => {
 
@@ -17,7 +17,7 @@ const main = () => {
   connectToDatabase()
 }
 
-connectToDatabase = () => {
+const connectToDatabase = () => {
   const db = new DB()
   db.connect()
 }
